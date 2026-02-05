@@ -8,10 +8,10 @@ import requests
 app = FastAPI()
 
 API_KEY = "guvi123"
-
 class AudioRequest(BaseModel):
-    audio_url: str
+    audio_base64: str
     language: str
+
 
 def verify_key(x_api_key: str):
     if x_api_key != API_KEY:
